@@ -1,22 +1,12 @@
-import React from 'react';
-import {
-  Drawer,
-  DrawerBody,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  Button,
-} from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import {BiMenuAltLeft} from "react-icons/bi"
+import React from 'react'
 
 const Header = () => {
-  <>
-  <Button>
-   <BiMenuAltLeft/>
-  </Button>
-  </>
-};
+  return (
+    <div>
+        <h1>Header</h1>
+      
+    </div>
+  )
+}
 
 export default Header;
