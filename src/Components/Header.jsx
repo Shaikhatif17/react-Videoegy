@@ -9,6 +9,7 @@ import {
   Button,
   useDisclosure,
   VStack,
+  HStack,
 } from '@chakra-ui/react';
 import {Link} from "react-router-dom";
 import {BiMenuAltLeft} from "react-icons/bi"
@@ -38,7 +39,7 @@ const Header = () => {
       <DrawerCloseButton/>
       <DrawerHeader>VIDEOEGY</DrawerHeader>
       <DrawerBody>
-        <VStack>
+        <VStack alignItems={'flex-start'}>
           <Button variant={'ghost'} colorScheme='"purple'>
             <Link to="/">Home</Link>
           </Button>
@@ -52,6 +53,10 @@ const Header = () => {
             <Link  to="/upload">upload video</Link>
           </Button>
         </VStack>
+
+        <HStack>
+          <Button>ok</Button>
+        </HStack>
       </DrawerBody>
     </DrawerContent>
 
