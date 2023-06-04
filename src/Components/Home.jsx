@@ -1,5 +1,7 @@
 import React from 'react';
-import { Box, Heading, Image } from '@chakra-ui/react';
+
+import { Box, Container, Heading, Image, Stack, Text } from '@chakra-ui/react';
+
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import img1 from '../assets/1.jpg';
@@ -8,36 +10,33 @@ import img3 from '../assets/3.jpg';
 import img4 from '../assets/4.jpg';
 import img5 from '../assets/5.png';
 
+
+
 const Home = () => {
-  const headingOptions = {
-    pos: 'absolute',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%,-50%)',
-    textTransform: 'uppercase',
-    p: '4',
-    size: '4xl',
-  };
+  return (
+    <Box>
+      <MyCarousel />
 
-  const myCarousel = () => (
-    
-    <Carousel
-      autoPlay
-      infiniteLoop
-      interval={1000}
-      showStatus={false}
-      showArrows={false}
-      showThumbs={false}
-    >
-<Box w="full" h="100vh">
-  <Image src={img1}/>
-  <Heading bgColor={"blackAlpha.600"} color={"white"}>watch the future</Heading>
-</Box>
-
-
-    </Carousel>
+    </Box>
   );
-  <myCarousel/>
 };
+
+const MyCarousel = () => (
+  <Carousel
+    autoPlay
+    infiniteLoop
+    interval={1000}
+    showStatus={false}
+    showThumbs={false}
+    showArrows={false}
+  >
+    <Box w="full" h={'100vh'}>
+      <Image src={img1} h="full" w={'full'} objectFit={'cover'} />
+      <Heading bgColor={'blackAlpha.600'} color={'white'} >
+        Watch The Future
+      </Heading>
+   </Box>
+  </Carousel>
+);
 
 export default Home;
