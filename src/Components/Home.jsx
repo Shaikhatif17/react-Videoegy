@@ -10,16 +10,45 @@ import img3 from '../assets/3.jpg';
 import img4 from '../assets/4.jpg';
 import img5 from '../assets/5.png';
 
-
-
 const Home = () => {
   return (
     <Box>
       <MyCarousel />
-<Container maxW={'container.xl'} minH={'100vh'} p='16'>
-  <Heading textTransform={'uppercase'} py="2" w={"fit-content"} borderBottom={'2px solid'} m='auto'>Services</Heading>
+      <Container maxW={'container.xl'} minH={'100vh'} p="16">
+        <Heading
+          textTransform={'uppercase'}
+          py="2"
+          w={'fit-content'}
+          borderBottom={'2px solid'}
+          m="auto"
+        >
+          Services
+        </Heading>
 
-</Container>
+        <Stack
+          h="full"
+          p={'4'}
+          alignItems={'center'}
+          direction={['column', 'row']}
+        >
+          <Image src={img5} h={['40', '400']} filter={'hue-rotate(-130deg)'} />
+          <Text letterSpacing={'widest'} lineHeight={'190%'} p={['4','16']} textAlign={'center'}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+          numquam amet alias sed molestias explicabo atque ut esse, dolor hic
+          necessitatibus aliquid minus molestiae tenetur autem facilis dicta
+          eaque enim, expedita, a laboriosam ratione asperiores modi. Non nisi,
+          corporis modi ullam, cumque unde nostrum saepe commodi est, tenetur
+          laudantium quaerat provident velit dicta! Similique, sapiente
+          laboriosam? Expedita rerum laudantium possimus quae ullam molestias
+          optio enim cumque et, dicta vitae nostrum facilis architecto illo hic
+          quisquam. Soluta laboriosam totam repudiandae illum possimus. Sint
+          quasi animi consequatur, accusamus natus delectus, ea, voluptatem
+          dolore quam alias beatae. In, omnis laborum. Autem, reprehenderit
+          aliquid!
+        </Text>
+        </Stack>
+        
+      </Container>
     </Box>
   );
 };
@@ -44,28 +73,28 @@ const MyCarousel = () => (
   >
     <Box w="full" h={'100vh'}>
       <Image src={img1} h="full" w={'full'} objectFit={'cover'} />
-      <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions} >
+      <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
         Watch The Future
       </Heading>
-   </Box>
+    </Box>
     <Box w="full" h={'100vh'}>
       <Image src={img2} h="full" w={'full'} objectFit={'cover'} />
       <Heading bgColor={'whiteAlpha.900'} color={'black'} {...headingOptions}>
-       Future is Gaming
+        Future is Gaming
       </Heading>
-  </Box>
+    </Box>
     <Box w="full" h={'100vh'}>
       <Image src={img3} h="full" w={'full'} objectFit={'cover'} />
       <Heading bgColor={'whiteAlpha.600'} color={'white'} {...headingOptions}>
-      Gaming on Console
+        Gaming on Console
       </Heading>
-  </Box>
+    </Box>
     <Box w="full" h={'100vh'}>
       <Image src={img4} h="full" w={'full'} objectFit={'cover'} />
       <Heading bgColor={'whiteAlpha.600'} color={'white'} {...headingOptions}>
-       Night life is Cool
+        Night life is Cool
       </Heading>
-  </Box>
+    </Box>
   </Carousel>
 );
 
