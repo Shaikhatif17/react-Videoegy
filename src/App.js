@@ -9,13 +9,16 @@ import Videos from './Components/Videos';
 
 
 
+
 function App() {
   return (
   <Router>
     <Header/>
     <Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path='/' element={<Videos/>}/>
+      <Route path='/videos' element={<Videos/>}/>
+     
+     
     </Routes>
     <Footer/>
   </Router>
