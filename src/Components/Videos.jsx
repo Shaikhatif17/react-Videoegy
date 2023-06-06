@@ -1,5 +1,5 @@
+import { Button, Heading, Stack, Text, VStack } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import { Heading, Stack, VStack, Text, Button } from '@chakra-ui/react';
 
 const Videos = () => {
   const videosArr = [
@@ -13,8 +13,9 @@ const Videos = () => {
   ];
 
   const [videoSrc, setVideoSrc] = useState(videosArr[0]);
+
   return (
-    <Stack direction={['colum', 'row']} h={'100vh'}>
+    <Stack direction={['column', 'row']} h={'100vh'}>
       <VStack w={'full'}>
         <video
           controls
@@ -24,25 +25,29 @@ const Videos = () => {
             width: '100%',
           }}
         ></video>
-        <VStack alignItems={'flex-start'} p={'8'} w={'full'} overflow={'auto'}>
-          <Heading>sample video 1</Heading>
+
+        <VStack alignItems={'flex-start'} p={'8'} w={'full'} overflowY={'auto'}>
+          <Heading>Sample Video 1</Heading>
           <Text>
-            {' '}
-            this is a sample video for testing and demo. this is called
-            description
+            This is a sample video for testing and demo. This is called
+            description.
           </Text>
         </VStack>
       </VStack>
       <VStack
         w={['full', 'xl']}
         alignItems={'stretch'}
-        p={'8'}
+        p="8"
         spacing={'8'}
-        overflow={'auto'}
+        overflowY={'auto'}
       >
         {videosArr.map((item, index) => (
-          <Button variant={'ghost'} colorScheme="purple" onClick={()=>setVideoSrc(item)}>
-            lecture {index}
+          <Button
+            variant={'ghost'}
+            colorScheme={'purple'}
+            onClick={() => setVideoSrc(item)}
+          >
+            Lecture {index + 1}
           </Button>
         ))}
       </VStack>
